@@ -2,6 +2,15 @@ import json
 
 
 def filter_users_by_name(name):
+    """
+    Filter and print all users whose name matches the given string.
+
+    The comparison is case-insensitive. Loads user data from 'users.json'
+    and prints each matching user dictionary to the console.
+    :param
+        name (str): The name to filter users by.
+    :return: None
+    """
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -13,6 +22,15 @@ def filter_users_by_name(name):
 
 
 def filter_by_age(age):
+    """
+    Filter and print all users whose age matches the given integer.
+
+    Loads user data from 'users.json' and prints each matching user
+    dictionary to the console. Only exact integer matches are returned.
+    :param
+        age (int): The age value used to filter users.
+    :return: None
+    """
     with open("users.json", "r") as file:
         users = json.load(file)
 
